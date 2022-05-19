@@ -39,7 +39,7 @@ window.onload = function ()
                 <li>
                     <a href="mailto:heliosas@gmail.com">
                         <img src="../photo/email-icon.png" alt="Contact us via Email"/>
-                        <span>heliosas@gmail.com</span>
+                        <span>unipr@gmail.com</span>
                     </a>
                 </li>
             </ul>
