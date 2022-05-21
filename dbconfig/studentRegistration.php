@@ -12,8 +12,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $email          = $_POST['email'];
     $userPassword   = $_POST['password'];
     $register       = $_POST['student_register'];
+    $semester       =$_POST['semester'];
     $role="student";
-    $sql=" INSERT INTO users(email,id,name,password,role,surname,username) VALUES ('$email','$userRegNumber','$userFname','$userPassword','$role','$userLname','$userName')";
+    $hashedpassword= password_hash($userPassword,PASSWORD_DEFAULT);
+    $sql=" INSERT INTO student(email_s,id_s,name_s,password_s,role,surname_s,username_s,semestri_s) VALUES ('$email','$userRegNumber','$userFname','$hashedpassword','$role','$userLname','$userName','$semester')";
     if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
      } else {

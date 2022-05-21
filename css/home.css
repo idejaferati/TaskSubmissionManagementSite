@@ -171,3 +171,7 @@ a {
 .footer-right-div ul li img{
     width: 14px;
 }
+form #noto{
+    background-color: white;
+    height:30px;
+}
