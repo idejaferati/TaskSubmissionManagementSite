@@ -21,7 +21,7 @@
         <input required autocomplete="off" type="text" name="lname" placeholder="Shkruani mbiemrin tuaj">
         <input required autocomplete="off" type="text" name="regNumber" placeholder="Shkruaj numrin e id-se tuaj">
         <input required autocomplete="off" type="text" name="username" placeholder="Zgjedhni nje username">
-        <input required autocomplete="off" type="text"  name="email" placeholder="Shkruani email-in tuaj">
+        <input required autocomplete="off" type="text" name="email" placeholder="Shkruani email-in tuaj">
         <input required autocomplete="off" type="password" name="password" placeholder="Zgjedhni nje password">
         <input type="submit" name="lec_register" value="Regjistrohu">
     </form>

@@ -19,12 +19,12 @@ session_start();
         <!--jscode-->
    </header>
     <nav class="menu-nav">
-        <div class="menu">
+        <div class="menu" style="text-align: center;">
         <a href="../profesor/home_p.php">Home</a>
              <a href="../profesor/lendet_p.php"><span class="current-page">Lendet</span> </a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>
              <a href="../profesor/dorezimet_p.php">Dorezimet</a>
-             <a href="../profesor/faq.php">FAQ</a>
+             <a href="../profesor/faq_p.php">FAQ</a>
              <a href="../profesor/profile.php">Profili</a>
              
          </div>

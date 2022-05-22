@@ -21,7 +21,7 @@ session_start();
         <!--jscode-->
    </header>
     <nav class="menu-nav">
-        <div class="menu">
+        <div class="menu" style="text-align: center;">
         <a href="../profesor/home_p.php">Home</a>
              <a href="../profesor/lendet_p.php">Lendet</a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>

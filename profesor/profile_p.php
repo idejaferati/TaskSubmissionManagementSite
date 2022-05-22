@@ -23,8 +23,8 @@ include("../dbconfig/config.php");
         <!--jscode-->
    </header>
     <nav class="menu-nav">
-        <div class="menu">
-        <a href="../profesor/home_p.php">Home</a>
+        <div class="menu" style="text-align: center;">
+        <a href="../profesor/home_p.php" style="text-align: center;">Home</a>
              <a href="../profesor/lendet_p.php">Lende</a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>
              <a href="../profesor/dorezimet_p.php">Dorezimet</a>
@@ -49,8 +49,13 @@ $result=mysqli_query($conn,$sql);
 <?php
 while($rows=mysqli_fetch_array($result)){
 ?>
-<div id="signup">
-<div id="signup-st">
+<div id="signup" style=" 
+display: flex;
+justify-content: center;";>
+<div id="signup-st" style="
+  display: flex;
+  justify-content: center;
+  transform: translateX(65%)";>
 <form action="" method="POST" id="signin" id="reg">
 <div id="reg-head" class="headrg">Profili yt</div>
 <table border="0" align="center" cellpadding="2" cellspacing="0">
