@@ -57,7 +57,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     $email = validate($_POST['email']);
 
-    $pass = validate($_POST['password']);
+    $password = validate($_POST['password']);
+    $pass=md5($password);
     $choice=$_POST['loginAS'];
 
     if (empty($email)) {

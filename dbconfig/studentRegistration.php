@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $register       = $_POST['student_register'];
     $semester       =$_POST['semester'];
     $role="student";
-    $hashedpassword= password_hash($userPassword,PASSWORD_DEFAULT);
+    $hashedpassword= md5($userPassword);
     $sql=" INSERT INTO student(email_s,id_s,name_s,password_s,role,surname_s,username_s,semestri_s) VALUES ('$email','$userRegNumber','$userFname','$hashedpassword','$role','$userLname','$userName','$semester')";
     if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";

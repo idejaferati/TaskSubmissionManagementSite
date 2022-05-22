@@ -23,8 +23,8 @@ session_start();
              <a href="../profesor/lendet_p.php">Lendet</a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>
              <a href="../profesor/dorezimet_p.php">Dorezimet</a>
-             <a href="../profesor/faq.php">FAQ</a>
-             <a href="../profesor/profile.php">Profili</a>
+             <a href="../profesor/faq_p.php">FAQ</a>
+             <a href="../profesor/profile_p.php">Profili</a>
              
              
          </div>

@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $userPassword   = $_POST['password'];
     $register       = $_POST['lec_register'];
     $role="profesor";
-    $hashedpassword= password_hash($userPassword,PASSWORD_DEFAULT);
+    $hashedpassword= md5($userPassword);
     $sql=" INSERT INTO profesor(id_p,name_p,surname_p,email_p,username,password,role) VALUES ('$userRegNumber','$userFname','$userLname','$email','$userName','$hashedpassword','$role')";
     if (mysqli_query($conn, $sql)) {
       echo "New record has been added successfully !";

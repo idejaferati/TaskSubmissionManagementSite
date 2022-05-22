@@ -26,8 +26,8 @@ session_start();
              <a href="../profesor/lendet_p.php">Lendet</a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>
              <a href="../profesor/dorezimet_p.php"><span class="current-page">Dorezimet</span></a>
-             <a href="../profesor/faq.php">FAQ</a>
-             <a href="../profesor/profile.php">Profili</a>
+             <a href="../profesor/faq_p.php">FAQ</a>
+             <a href="../profesor/profile_p.php">Profili</a>
              
          </div>
        </nav>
@@ -38,6 +38,7 @@ session_start();
     <div class="table-responsive">
       <table class="table table-bordered">
        <thead><tr>
+     
          <th>Emri</th>
          <th>Mbiemri
          </th>
@@ -50,7 +51,7 @@ session_start();
 
   <?php
   $profid=$_SESSION['id'];
-     $sql="SELECT name_s,surname_s,emri_t,date_d,content_d,grade_d
+     $sql="SELECT tasks_done.id_td,name_s,surname_s,emri_t,date_d,content_d,grade_d
      FROM tasks_done
      
      INNER JOIN student ON tasks_done.id_s=student.id_s
@@ -64,7 +65,10 @@ session_start();
      }
 
     while($row=$result->fetch_assoc()){
+    
+      $idtask=$row["id_td"];
         echo "<tr>
+      
       <td>".$row["name_s"]."</td>
       <td>".$row["surname_s"]."</td>
       <td>".$row["emri_t"]."</td>
@@ -72,6 +76,7 @@ session_start();
       <td><a href=".$row["content_d"].">Me shume</a></td> 
       <td><form action='../dbconfig/notoSetUp.php' method='post' id='noto'>
       <input type='number' name='notimi'>
+      <input type='hidden' name='taskid' value='$idtask'>
       <input type='submit' name='shtolende_btn' value='Ruaj'></form></td>
 
      </tr>";
