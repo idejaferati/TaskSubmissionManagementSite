@@ -24,10 +24,11 @@
             <input type="checkbox" value="lecturer"><span>lecturer</span> -->
             <input type="submit" name="login_btn" value="submit">
         </form>
+        back to <a href="index.php">homepage</a> 
     </section>
 
     <footer>
-        back to <a href="index.php">homepage</a> 
+     
     </footer>
 </body>
 </html>

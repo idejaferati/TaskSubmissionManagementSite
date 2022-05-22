@@ -16,13 +16,13 @@
 
     <nav class="menu-nav">
         <div class="menu">
-             <a href="../student/html/home.html"><span class="current-page">Home</span> </a>
-             <a href="../student/html/lendet.html">Lendet</a>
-             <a href="../student/html/detyrat.html">Detyrat</a>
-             <a href="../student/html/vleresimet.html">Vleresimet</a>
-             <a href="../student/html/dorezodetyren.html">Dorezo detyren</a>
-             <a href="../student/html/faq.html">FAQ</a>
-             <a href="../student/html/profile.html">Profili</a>
+             <a href="../student/home_s.php"><span class="current-page">Home</span> </a>
+             <a href="../student/lendet_s.php">Lendet</a>
+             <a href="../student/detyrat_s.php">Detyrat</a>
+             <a href="../student/vleresimet_s.php">Vleresimet</a>
+             <a href="../student/dorezodetyren_s.php">Dorezo detyren</a>
+             <a href="../student/faq_s.php">FAQ</a>
+             <a href="../student/profile_s.php">Profili</a>
              
          </div>
        </nav>

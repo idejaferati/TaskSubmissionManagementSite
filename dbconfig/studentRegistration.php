@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $hashedpassword= md5($userPassword);
     $sql=" INSERT INTO student(email_s,id_s,name_s,password_s,role,surname_s,username_s,semestri_s) VALUES ('$email','$userRegNumber','$userFname','$hashedpassword','$role','$userLname','$userName','$semester')";
     if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
+      header("Location: ../login.php");
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
      }

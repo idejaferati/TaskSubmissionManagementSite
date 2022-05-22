@@ -32,20 +32,21 @@ if (isset($_POST['op']) && isset($_POST['np'])
     	// hashing the password
     	
     	$np = md5($np);
-		$op=md5($op);
+        $op=md5($op);
         $id = $_SESSION['id'];
 
-        $sql = "SELECT password
-                FROM profesor WHERE 
-                id_p='$id' AND password='$op'";
+        $sql = "SELECT password_s
+                FROM student WHERE 
+                id_s='$id' AND password_s='$op'";
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) === 1){
+            echo"mire o";
         	
-        	$sql_2 = "UPDATE profesor
-        	          SET password='$np'
-        	          WHERE id_p='$id'";
+        	$sql_2 = "UPDATE student
+        	          SET password_s='$np'
+        	          WHERE id_s='$id'";
         	mysqli_query($conn, $sql_2);
-        	header("Location: ../profesor/profile_p.php");
+        	header("Location: ../student/profile_s.php");
 	        exit();
 
         }else {

@@ -1,0 +1,47 @@
+<?php
+include_once 'config.php';
+session_start();
+
+	$fileExistsFlag = 0; 
+	$fileName = $_FILES['Filename']['name'];
+	
+	/* 
+	*	Checking whether the file already exists in the destination folder 
+	*/
+	$query = "SELECT content_d FROM tasks_done WHERE content_d='$fileName'";	
+	$result = $link->query($query) or die("Error : ".mysqli_error($link));
+	while($row = mysqli_fetch_array($result)) {
+		if($row['content_d'] == $fileName) {
+			$fileExistsFlag = 1;
+		}		
+	}
+	/*
+	* 	If file is not present in the destination folder
+	*/
+	if($fileExistsFlag == 0) { 
+		$target = "uploads/";		
+		$fileTarget = $target.$fileName;	
+		$tempFileName = $_FILES["Filename"]["tmp_name"];
+		$fileDescription = $_POST['Description'];	
+		$result = move_uploaded_file($tempFileName,$fileTarget);
+		/*
+		*	If file was successfully uploaded in the destination folder
+		*/
+		if($result) { 
+			echo "Your file <html><b><i>".$fileName."</i></b></html> has been successfully uploaded";		
+		//	$query = "INSERT INTO tasks_done(filepath,filename,description) VALUES ('$fileTarget','$fileName','$fileDescription')";
+			$link->query($query) or die("Error : ".mysqli_error($link));			
+		}
+		else {			
+			echo "Sorry !!! There was an error in uploading your file";			
+		}
+		mysqli_close($link);
+	}
+	/*
+	* 	If file is already present in the destination folder
+	*/
+	else {
+		echo "File <html><b><i>".$fileName."</i></b></html> already exists in your folder. Please rename the file and try again.";
+		mysqli_close($link);
+	}	
+?>
