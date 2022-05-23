@@ -2,46 +2,32 @@
 include_once 'config.php';
 session_start();
 
-	$fileExistsFlag = 0; 
-	$fileName = $_FILES['Filename']['name'];
-	
-	/* 
-	*	Checking whether the file already exists in the destination folder 
-	*/
-	$query = "SELECT content_d FROM tasks_done WHERE content_d='$fileName'";	
-	$result = $link->query($query) or die("Error : ".mysqli_error($link));
-	while($row = mysqli_fetch_array($result)) {
-		if($row['content_d'] == $fileName) {
-			$fileExistsFlag = 1;
-		}		
-	}
-	/*
-	* 	If file is not present in the destination folder
-	*/
-	if($fileExistsFlag == 0) { 
-		$target = "uploads/";		
-		$fileTarget = $target.$fileName;	
-		$tempFileName = $_FILES["Filename"]["tmp_name"];
-		$fileDescription = $_POST['Description'];	
-		$result = move_uploaded_file($tempFileName,$fileTarget);
-		/*
-		*	If file was successfully uploaded in the destination folder
-		*/
-		if($result) { 
-			echo "Your file <html><b><i>".$fileName."</i></b></html> has been successfully uploaded";		
-		//	$query = "INSERT INTO tasks_done(filepath,filename,description) VALUES ('$fileTarget','$fileName','$fileDescription')";
-			$link->query($query) or die("Error : ".mysqli_error($link));			
-		}
-		else {			
-			echo "Sorry !!! There was an error in uploading your file";			
-		}
-		mysqli_close($link);
-	}
-	/*
-	* 	If file is already present in the destination folder
-	*/
-	else {
-		echo "File <html><b><i>".$fileName."</i></b></html> already exists in your folder. Please rename the file and try again.";
-		mysqli_close($link);
-	}	
+  $msg = "";
+ 
+  // If upload button is clicked ...
+  if (isset($_POST['dorezodetyren'])&& isset($_POST['lenda'])&& isset($_POST['detyra'])&& isset($_POST['semestri'])&& isset($_POST['Filename'])) {
+ 
+    $filename = $_FILES["Filename"]["name"];
+    $tempname = $_FILES["Filename"]["tmp_name"];   
+        $folder = "uploads/".$filename;
+    $emrilendes=$_POST['lenda'];
+ 
+        // Get all the submitted data from the form
+$id_s=$_SESSION['id'];
+$sql1="Select distinct(id_t) from tasks INNER JOIN lendet ON tasks.lendaid_t=lendet.id_l Where lendet.name_l=$emrilendes";
+$id_t=mysqli_query($conn,$sql);
+$koha=curdate();
+        $sql = "INSERT INTO tasks_done (id_t,id_s,date_d,content_d)VALUES ('$id_t','$id_s','$koha','$filename')";
+ 
+        // Execute query
+        mysqli_query($conn, $sql);
+         
+        // Now let's move the uploaded image into the folder: image
+        if (move_uploaded_file($tempname, $folder))  {
+            $msg = "Image uploaded successfully";
+        }else{
+            $msg = "Failed to upload image";
+      }
+  }
+  $result = mysqli_query($db, "SELECT * FROM tasks_done");
 ?>

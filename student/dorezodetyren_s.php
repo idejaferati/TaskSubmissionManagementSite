@@ -39,7 +39,7 @@ session_start();
 <section id="login">
         <h1>Dorezo detyren</h1>
 
-        <form action="../dbconfig/dorezodetyren.php" method="post">
+        <form name="dorezo" action="../dbconfig/dorezodetyren.php" method="post">
         <input type="text" name="lenda" placeholder="Shkruaj emrin e lendes qe deshironi te dorezoni detyren">
             <input type="text" name="detyra" placeholder="Shkruaj emrin e detyres qe deshironi te dorezoni">
             <input type="number" name="semestri" placeholder="Zgjedh semestrin">
