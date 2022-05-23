@@ -23,7 +23,7 @@
 <?php
 
 	// connect with database
-	$conn = new PDO("mysql:host=localhost:4000;dbname=menaxhimistudenteve", "root", "");
+	$conn = new PDO("mysql:host=localhost:3325;dbname=menaxhimistudenteve", "root", "admin");
 
 	// check if insert form is submitted
 	if (isset($_POST["submit"]))
