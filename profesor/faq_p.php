@@ -54,21 +54,9 @@
 	$faqs = $statement->fetchAll();
 
 ?>
-
-<!-- include bootstrap, font awesome and rich text library CSS -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="richtext/richtext.min.css" />
-
-<!-- include jquer, bootstrap and rich text JS -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="richtext/jquery.richtext.js"></script>
-
-
 <!-- layout for form to add FAQ -->
 <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
-	<div class="row">
+	<div class="row" style="margin-top: -20px;">
 		<div class="offset-md-3 col-md-6">
 			<h1 class="text-center">FAQ</h1>
 
@@ -88,7 +76,7 @@
 				</div>
 
 				<!-- submit button -->
-				<input type="submit" name="submit" class="btn btn-info" value="Add FAQ" />
+				<input type="submit" name="submit" class="btn btn-info" style="margin-top: 15px; transform:translateX(75%); width:250px" value="Add FAQ" />
 			</form>
 		</div>
 	</div>
@@ -116,8 +104,8 @@
 							<td><?php echo $faq["answer"]; ?></td>
 							<td>
 								<!-- edit button -->
-								<a href="edit.php?id=<?php echo $faq['id']; ?>" class="btn btn-warning btn-sm">
-									Edit
+								<a style=" margin-bottom:10px; " href="edit.php?id=<?php echo $faq['id']; ?>" class="btn btn-warning btn-sm">
+									Answer/Edit
 								</a>
 
 								<!-- delete form -->

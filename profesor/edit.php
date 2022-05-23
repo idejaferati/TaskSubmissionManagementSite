@@ -1,9 +1,12 @@
 <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="../css/home.css" type="text/css" media="all">
-    <link rel="stylesheet" href="../css/lendet_p.css" type="text/css" media="all">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../richtext/richtext.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <nav class="menu-nav">
-        <div class="menu">
+        <div class="menu" style="text-align: center;">
         <a href="../profesor/home_p.php">Home</a>
              <a href="../profesor/lendet_p.php">Lende</a>
              <a href="../profesor/vleresimet_p.php">Vleresimet</a>
@@ -50,23 +53,13 @@
 	}
 
 ?>
-
-<!-- include CSS -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="richtext/richtext.min.css" />
-
 <!-- include JS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="../richtext/richtext.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <!-- layout for form to edit FAQ -->
-<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+<div class="container" style="margin-top: 0px; margin-bottom: 50px;">
 	<div class="row">
 		<div class="offset-md-3 col-md-6">
-			<h1 class="text-center">Edit FAQ</h1>
+			<h1 style="margin-top: 100px" class="text-center">Edit FAQ</h1>
 
 			<!-- form to edit FAQ -->
 			<form method="POST" action="edit.php">
@@ -83,11 +76,11 @@
 				<!-- answer, auto-populate -->
 				<div class="form-group">
 					<label>Enter Answer</label>
-					<textarea name="answer" id="answer" class="form-control" required><?php echo $faq['answer']; ?></textarea>
+					<textarea name="answer" id="answer" rows="5" class="form-control" required><?php echo $faq['answer']; ?></textarea>
 				</div>
 
 				<!-- submit button -->
-				<input type="submit" name="submit" class="btn btn-warning" value="Edit FAQ" />
+				<input type="submit" name="submit" style="margin-top: 15px; transform:translateX(75%); width:250px" class="btn btn-warning" value="Edit FAQ" />
 			</form>
 		</div>
 	</div>

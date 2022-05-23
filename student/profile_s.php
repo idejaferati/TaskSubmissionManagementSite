@@ -24,7 +24,7 @@ include("../dbconfig/config.php");
    </header>
     <nav class="menu-nav">
         <div class="menu">
-        <a href="../student/home_s.php">Home </a>
+        <a href="../student/home_s.php" style="text-align: center;">Home </a>
              <a href="../student/lendet_s.php">Lendet</a>
              <a href="../student/detyrat_s.php">Detyrat</a>
              <a href="../student/vleresimet_s.php">Vleresimet</a>
@@ -40,7 +40,9 @@ include("../dbconfig/config.php");
 <div id="center">
 <div id="center-set">
 
-<div id="contentbox">
+<div id="contentbox"style=" 
+display: flex;
+justify-content: center;">
 <?php
 $id=$_SESSION['id'];
 $sql="SELECT * FROM student where id_s=$id";
