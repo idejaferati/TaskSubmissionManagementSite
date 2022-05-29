@@ -1,0 +1,111 @@
+#center{
+    padding-top: 70px;
+    width:95%;
+}
+#center-set{
+    float: left;
+    width:100%;
+    padding-top:1%;
+    padding-bottom:0.5%;
+    border-top:5px solid rgb(161, 24, 40);
+}
+#signup{
+    float:left;
+    width:50%;
+   }
+   #signup-st{
+    background-color: rgb(161, 24, 40);
+    color: white;
+    margin:50px;
+    border-radius:20px;
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(189, 175, 175, 0.85);
+    height: 400px;
+
+   }
+   #reg{
+    padding-top:10px;
+   }
+   #reg-head{
+    width:100%;
+    text-align:center;
+    background-color:#fff;
+    font-weight:bold;
+   }
+   .headrg{
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size:22px;
+    color: rgb(131, 122, 123);
+   }
+ 
+   #tb-name{
+    float:right;
+    font-size:20px;
+   }
+  
+   #st{
+    width:100%;
+    text-align:center;
+    padding-top:30px;
+    padding-bottom:10px;
+   }
+   .button{
+    float:left;
+    margin:2px;
+    background-color: #bebbb2;
+    color:white;
+    border-color: rgb(163, 141, 141);
+ 
+ }
+ .button a {
+     color:white;
+ }
+ .button a:hover {
+     color:white;
+
+ }
+ #buttonform{
+    margin-left: 120px;
+ }
+   .button:hover{
+    color: white;
+    background:rgb(161, 24, 40);
+    transition:1s;
+   }
+
+   #lg-1{
+    padding:10px;
+    float:left;
+    width:95%;
+   }
+   .tl-1{
+    float:left;
+    width:40%;
+    padding-right:5%;
+    text-align:center;
+    color:white;
+   }
+   .tl-4{
+    font-size:17px;
+    font-weight:bold;
+    text-align:center;
+    color:#bebbb2;
+   }
+   #login{
+    float:right;
+    width:50%;
+   }
+   #login-sg{
+    margin-top:20%;
+   }
+   #footer{
+    background-color:#fff;
+    width:100%;
+    height:50px;
+    margin:0px;
+    float:left;
+    border-top:5px solid rgb(161, 24, 40);
+   }
+ 
